@@ -1,0 +1,107 @@
+@import './mixins'
+
+.form-container
+    display: grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    grid-template-rows: auto 1fr
+    row-gap: 1.5em
+    column-gap: 1em
+    margin: 1em 20%
+    border-radius: 32px
+    padding: 2em
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1)
+
+.save-container
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    grid-column: 1 / span 2
+    grid-row: 1
+
+    .select-board-container select
+        @include board-select(#111)
+
+    .save-pin-btn
+        margin-left: 1.5em
+        @include red-button($padding: 0.75em 1em)
+
+.upload-container
+    justify-self: center
+    height: 454px
+    border-radius: 12px
+    background-color: #efefef
+    width: 90%
+
+    .upload-wrapper
+        display: flex
+        flex-direction: column
+        height: calc( 100% - 2em )
+        margin: 1em
+        border-radius: inherit
+        border: 1px dashed #dadada
+
+        .upload-notice
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-top: auto
+
+            svg
+                color: #767676
+                width: 32px
+                height: 32px
+
+            .upload-notice-text
+                margin-top: 0.75em
+
+        .upload-recommendation
+            display: flex
+            justify-content: center
+            font-size: 0.875rem
+            color: #877d91
+            text-align: center
+            margin-top: auto
+            padding: 0 2em
+            margin-bottom: 2em
+
+    input[type="file"]
+        display: none
+
+.input-container
+    display: flex
+    flex-direction: column
+    padding: 2em 3em 2em 0
+
+    > * + *
+        margin-top: 2em
+
+    .input
+        outline: none
+        padding-bottom: 0.25em
+        border: none
+        border-bottom: 1px solid rgba(142, 142, 142, 0.5)
+        color: #333
+
+    .input-title
+        font-size: 2.25rem
+        font-weight: bold
+
+.form-error
+    margin-top: 1.25rem
+    color: #e60023
+    font-size: 0.75rem
+    text-align: left
+
+.preview-wrapper
+    width: 100%
+    height: 100%
+    display: none
+
+    img, video
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 16px
+
+#image-preview, #video-preview
+    display: none

@@ -1,0 +1,57 @@
+.fab-btn
+    display: flex
+
+.fab-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 200
+    position: fixed
+    bottom: 25px
+    right: 32px
+    width: 54px
+    height: 54px
+    border-radius: 50%
+    background-color: rgb(230, 0, 35)
+    color: white
+    cursor: pointer
+    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 0px 8px)
+
+    svg
+        color: white
+
+    &:hover
+        background-color: #d50c22
+
+.dropdown-menu
+    display: none
+    position: fixed
+    bottom: 25px
+    right: 108px
+    z-index: 10
+
+    background-color: white
+    border-radius: 16px
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
+    padding: 1em 1em 0.5em 1em
+    width: 180px
+
+    .title
+        font-size: 0.75rem
+        color: #111
+        margin-bottom: 0.5rem
+
+    .menu-item
+        font-weight: bold
+        cursor: pointer
+        border-radius: 8px
+        margin: 0 -0.5em
+
+        a
+            padding: 0.5em
+            display: flex
+            width: 100%
+            height: 100%
+
+        &:hover
+            background-color: rgba(0, 0, 0, 0.06)

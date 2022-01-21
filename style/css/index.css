@@ -1,0 +1,105 @@
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  grid-auto-rows: 360px;
+  justify-content: center;
+  gap: 1em 0.5em;
+  margin-top: 1em;
+}
+
+.card-container {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card-container:hover .card-overlay {
+  display: block;
+}
+
+.card-container .card-image {
+  position: relative;
+  border-radius: 16px;
+}
+
+.card-container .card-image a {
+  border-radius: inherit;
+}
+
+.card-container .card-image img, .card-container .card-image video {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.card-container .card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+  padding: 0 0.5em;
+  font-weight: bold;
+}
+
+.card-container .card-title svg {
+  color: #e60023;
+}
+
+.card-overlay {
+  display: none;
+  padding: 0.5em 1em 0;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.card-overlay .overlay-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: auto;
+}
+
+.card-overlay .overlay-wrapper .select-board-container select {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-weight: 700;
+  max-width: 100%;
+}
+
+.card-overlay .overlay-wrapper .select-board-container select option {
+  color: black;
+}
+
+.card-overlay .overlay-wrapper .save-pin-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  background-color: #efefef;
+  padding: 0.75em 1em;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  background-color: #e60023;
+  outline: none;
+  border: none;
+}
+
+.card-overlay .overlay-wrapper .save-pin-btn:hover {
+  background-color: #e2e2e2;
+}
+
+.card-overlay .overlay-wrapper .save-pin-btn:hover {
+  background-color: #d50c22;
+}

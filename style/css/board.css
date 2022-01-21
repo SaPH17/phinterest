@@ -1,0 +1,192 @@
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  grid-auto-rows: 360px;
+  justify-content: center;
+  gap: 1em 0.5em;
+  margin-top: 1em;
+}
+
+.card-container {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card-container:hover .card-overlay {
+  display: block;
+}
+
+.card-container .card-image {
+  position: relative;
+  border-radius: 16px;
+}
+
+.card-container .card-image a {
+  border-radius: inherit;
+}
+
+.card-container .card-image img, .card-container .card-image video {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.card-container .card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+  padding: 0 0.5em;
+  font-weight: bold;
+}
+
+.card-container .card-title svg {
+  color: #e60023;
+}
+
+.card-overlay {
+  display: none;
+  padding: 0.5em 1em 0;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.card-overlay .overlay-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: auto;
+}
+
+.card-overlay .overlay-wrapper .select-board-container select {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-weight: 700;
+  max-width: 100%;
+}
+
+.card-overlay .overlay-wrapper .select-board-container select option {
+  color: black;
+}
+
+.card-overlay .overlay-wrapper .save-pin-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  background-color: #efefef;
+  padding: 0.75em 1em;
+  border-radius: 24px;
+  cursor: pointer;
+  color: white;
+  background-color: #e60023;
+  outline: none;
+  border: none;
+}
+
+.card-overlay .overlay-wrapper .save-pin-btn:hover {
+  background-color: #e2e2e2;
+}
+
+.card-overlay .overlay-wrapper .save-pin-btn:hover {
+  background-color: #d50c22;
+}
+
+.board-information-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.board-information-container .name-wrapper input {
+  font-weight: bold;
+  font-size: 2.25rem;
+  width: auto;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid rgba(142, 142, 142, 0.5);
+  outline: none;
+  padding-bottom: 0.25em;
+}
+
+.board-information-container .btn-wrapper {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.board-information-container .btn-container {
+  display: flex;
+  margin-top: 1.5em;
+}
+
+.board-information-container .btn-container > * + * {
+  margin-left: 1em;
+}
+
+.board-information-container .btn-container .btn-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: #efefef;
+  padding: 0;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.board-information-container .btn-container .btn-icon:hover {
+  background-color: #e2e2e2;
+}
+
+.board-information-container .btn-container .btn-text {
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 0.5em;
+}
+
+.board-content-container {
+  margin-top: 1em;
+}
+
+.board-content-container .heading {
+  padding: 0 1em;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.images-container {
+  padding-bottom: 3em;
+}
+
+.form-error {
+  color: #e60023;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 1.25em;
+}
+
+.delete-icon {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}

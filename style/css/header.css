@@ -1,0 +1,250 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1em;
+  background-color: white;
+}
+
+.header-container > * + * {
+  margin-left: 0.5em;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logo-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container:hover {
+  background-color: #f0f0f0;
+}
+
+.logo-container .logo {
+  color: #e60023;
+}
+
+.links-container ul {
+  list-style: none;
+}
+
+.links-container ul .nav-link a {
+  border-radius: 24px;
+  color: #111;
+  padding: 0.8em 1.25em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.links-container ul .nav-link:not(.active):hover a {
+  background-color: #f0f0f0;
+}
+
+.links-container ul .active a {
+  background-color: #2c1d1d;
+  color: white;
+}
+
+.search-container {
+  display: flex;
+  background-color: #efefef;
+  align-items: center;
+  border-radius: 24px;
+  padding: 1em;
+  flex-grow: 1;
+}
+
+.search-container .search-icon {
+  color: #767676;
+}
+
+.search-container .search-input {
+  border: none;
+  outline: none;
+  margin-left: 1em;
+  background-color: #efefef;
+  color: #333;
+  width: 100%;
+  flex: 1;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin: 0 1.5em;
+}
+
+.profile-container .picture-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-container .picture-container:hover {
+  background-color: #efefef;
+}
+
+.profile-container .picture-container img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.options-menu-container {
+  margin-left: 0.2em;
+  position: relative;
+}
+
+.options-menu-container .options-wrapper {
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.options-menu-container .options-wrapper .options-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.options-menu-container .options-wrapper .options-icon-container:hover {
+  background-color: #f0f0f0;
+}
+
+.options-menu {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 40px;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 1em;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+.menu-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+.menu-profile-container .title {
+  text-align: left;
+  color: #111;
+  font-size: 0.75rem;
+}
+
+.menu-profile-container .menu-links {
+  margin-top: 0.75em;
+}
+
+.menu-profile-container .menu-links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.menu-profile-container .menu-links ul > * + * {
+  margin-top: 0.2em;
+}
+
+.menu-profile-container .menu-links ul .link-item {
+  text-align: left;
+}
+
+.menu-profile-container .menu-links ul .link-item a {
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+  padding: 0.5em 0 0.5em 0.5em;
+  border-radius: 8px;
+  margin-left: -0.5em;
+}
+
+.menu-profile-container .menu-links ul .link-item a:hover {
+  background-color: #efefef;
+}
+
+.menu-profile {
+  display: flex;
+  align-items: stretch;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.menu-profile .profile-picture img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex: 1;
+  margin-left: 1em;
+}
+
+.profile-information .profile-name {
+  color: #111;
+  font-weight: 700;
+  text-align: left;
+}
+
+.profile-information .profile-email {
+  color: #767676;
+  font-size: 0.875rem;
+  text-align: left;
+  margin-top: 0.25em;
+}
+
+@media screen and (max-width: 480px) {
+  .profile-container {
+    margin: 0 0.5em;
+  }
+  .links-container ul .nav-link a {
+    font-size: 0.8rem;
+  }
+  .search-container {
+    padding: 0.8em;
+  }
+  .search-container .search-input {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .links-container {
+    display: none;
+  }
+}

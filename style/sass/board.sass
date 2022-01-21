@@ -1,0 +1,70 @@
+@import './mixins'
+@import './pin-card'
+
+.board-information-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 1em
+
+    .name-wrapper
+        input
+            font-weight: bold
+            font-size: 2.25rem
+            width: auto
+            text-align: center
+            border: none
+            border-bottom: 1px solid rgba(142, 142, 142, 0.5)
+            outline: none
+            padding-bottom: 0.25em
+
+    .btn-wrapper
+        cursor: pointer
+        outline: none
+        border: none
+        background: none
+
+    .btn-container
+        display: flex
+        margin-top: 1.5em
+
+        > * + *
+            margin-left: 1em
+
+        .btn-icon
+            width: 88px
+            height: 88px
+            border-radius: 16px
+            display: flex
+            justify-content: center
+            align-items: center
+            @include gray-button($padding: 0)
+
+        .btn-text
+            font-weight: bold
+            text-align: center
+            font-size: 0.75rem
+            margin-top: 0.5em
+
+.board-content-container
+    margin-top: 1em
+
+    .heading
+        padding: 0 1em
+        font-size: 1.25rem
+        font-weight: bold
+
+.images-container
+    padding-bottom: 3em
+
+.form-error
+    color: #e60023
+    font-size: 0.75rem
+    text-align: center
+    margin-top: 1.25em
+
+.delete-icon
+    border: none
+    outline: none
+    background: none
+    cursor: pointer

@@ -1,0 +1,69 @@
+.images-container
+    display: grid
+    grid-template-columns: repeat(auto-fill, 240px)
+    grid-auto-rows: 360px
+    justify-content: center
+    gap: 1em 0.5em
+    margin-top: 1em
+
+.card-container
+    display: grid
+    grid-template-rows: 1fr min-content
+    flex-direction: column
+    cursor: pointer
+
+    &:hover
+        .card-overlay
+            display: block
+
+    .card-image
+        position: relative
+        border-radius: 16px
+
+        a
+            border-radius: inherit
+
+        img, video
+            display: block
+            height: 100%
+            width: 100%
+            object-fit: cover
+            border-radius: inherit
+            pointer-events: none
+
+    .card-title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 0.5em
+        padding: 0 0.5em
+        font-weight: bold
+
+        svg
+            color: rgb(230, 0, 35)
+
+.card-overlay
+    display: none
+    padding: 0.5em 1em 0
+    position: absolute
+    inset: 0
+    border-radius: inherit
+    background-color: rgba(0, 0, 0, 0.4)
+    pointer-events: none
+
+    .overlay-wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        pointer-events: auto
+
+        .select-board-container select
+            @include board-select(white)
+
+        .save-pin-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            border: none
+            outline: none
+            @include red-button($padding: 0.75em 1em)

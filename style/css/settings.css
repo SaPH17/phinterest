@@ -1,0 +1,113 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 25% 3rem;
+}
+
+.content-container .heading {
+  width: 50%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #111;
+}
+
+.content-container .subheading {
+  width: 50%;
+  text-align: left;
+  color: #111;
+  margin-bottom: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+.form-group .form-title {
+  color: #111;
+  font-size: 0.75rem;
+}
+
+.form-group .form-input label {
+  margin-left: 1.5em;
+  font-weight: bold;
+  background-color: #efefef;
+  padding: 0.5em 1em;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.form-group .form-input label:hover {
+  background-color: #e2e2e2;
+}
+
+.form-group .form-input input[type="text"], .form-group .form-input input[type="password"] {
+  margin-top: 0.5em;
+  width: 100%;
+  border: 2px solid #ddd;
+  padding: 0.75em 1em;
+  outline: none;
+  border-radius: 16px;
+  color: #111;
+  background-color: white;
+  appearance: none;
+}
+
+.form-group .form-input input[type="text"]:hover, .form-group .form-input input[type="password"]:hover {
+  border-color: #d0d0d0;
+}
+
+.form-group .form-input input[type="text"]:focus, .form-group .form-input input[type="password"]:focus {
+  box-shadow: 0 0 0 4px rgba(0, 132, 255, 0.5);
+  outline: none;
+}
+
+.form-group .form-input input[type="file"] {
+  display: none;
+}
+
+.form-group button {
+  appearance: none;
+  border: none;
+  justify-self: flex-end;
+  font-weight: bold;
+  background-color: #efefef;
+  padding: 0.75em 1.5em;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #e2e2e2;
+}
+
+.form-error {
+  margin-top: 1.25rem;
+  color: #e60023;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.preview-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.preview-wrapper .preview img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}

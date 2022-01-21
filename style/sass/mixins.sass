@@ -1,0 +1,47 @@
+
+@mixin input-text($padding)
+    border: 2px solid #ddd
+    padding: $padding
+    outline: none
+    border-radius: 16px
+    color: #111
+    background-color: white
+    appearance: none
+
+    &:hover
+        border-color: #d0d0d0
+
+    &:focus
+        box-shadow: 0 0 0 4px rgba(0, 132, 255, 0.5)
+        outline: none
+
+@mixin gray-button($padding)
+    font-weight: bold
+    background-color: #efefef
+    padding: $padding
+    border-radius: 24px
+    cursor: pointer
+
+    &:hover
+        background-color: #e2e2e2
+
+@mixin red-button($padding)
+    @include gray-button($padding: $padding)
+    color: white
+    background-color: rgb(230, 0, 35)
+    outline: none
+    border: none
+
+    &:hover
+        background-color: #d50c22
+
+@mixin board-select($color)
+    background-color: transparent
+    border: none
+    color: $color
+    outline: none
+    font-weight: 700
+    max-width: 100%
+
+    option
+        color: black
