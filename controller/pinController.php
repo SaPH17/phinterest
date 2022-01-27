@@ -28,7 +28,7 @@
         if($title == "" || $pin_name == "" || $board == ""){
             handle_error_message("Title, image and board must be filled!", $title, $description);
         }
-        else if($size >= 1024 * 20){
+        else if($size >= 1024 * 1024 * 20){
             handle_error_message("Size must not exceed 20MB", $title, $description);
         }
         else if(!in_array($extension, $allowed_extension)){
