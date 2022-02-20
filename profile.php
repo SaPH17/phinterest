@@ -139,7 +139,7 @@
                                 <?php
                                     if($image_count > 0){
                                         $media = $row['pin'][0]['media'];
-                                        echo $row['pin'][0]['type'] == "video" ? "<video src=./asset/video/$media#t=1></video>" : "<img src=./asset/image/pin/$media >";
+                                        echo $row['pin'][0]['type'] == "video" ? "<video src='./asset/video/$media#t=1'></video>" : "<img src='./asset/image/pin/$media'>";
                                     }
                                     else{
                                         echo "<div class=placeholder></div>";
@@ -150,14 +150,14 @@
                                 <?php
                                     if($image_count > 1){
                                         $media = $row['pin'][1]['media'];
-                                        echo $row['pin'][1]['type'] == "video" ? "<video src=./asset/video/$media#t=1></video>" : "<img src=./asset/image/pin/$media >";
+                                        echo $row['pin'][1]['type'] == "video" ? "<video src='./asset/video/$media#t=1'></video>" : "<img src='./asset/image/pin/$media'>";
                                     }
                                     else{
                                         echo "<div class=placeholder></div>";
                                     }
                                     if($image_count > 2){
                                         $media = $row['pin'][2]['media'];
-                                        echo $row['pin'][2]['type'] == "video" ? "<video src=./asset/video/$media#t=1></video>" : "<img src=./asset/image/pin/$media >";
+                                        echo $row['pin'][2]['type'] == "video" ? "<video src='./asset/video/$media#t=1'></video>" : "<img src='./asset/image/pin/$media'>";
                                     }
                                     else{
                                         echo "<div class=placeholder></div>";

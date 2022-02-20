@@ -40,8 +40,8 @@
 
     function show_pin_card($row){
         $media = $row['media'];
-        echo $row['type'] == "video" ? "<video autoplay loop muted src=./asset/video/$media></video>" 
-                : "<img src=./asset/image/pin/$media >";
+        echo $row['type'] == "video" ? "<video autoplay loop muted src='./asset/video/$media'></video>" 
+                : "<img src='./asset/image/pin/$media' >";
     }
 
 ?>
